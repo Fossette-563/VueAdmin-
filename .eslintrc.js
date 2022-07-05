@@ -10,6 +10,10 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'space-before-function-paren': 'off'
+    'space-before-function-paren': 'off',
+    'vue/multi-word-component-names': 'off',
+    'eol-last': 'off',
+    'no-trailing-spaces': 'off',
+    quotes: 'off'
   }
 }
