@@ -33,7 +33,6 @@ instance.interceptors.response.use(
   function (response) {
     // 关闭loading
     // loading.close()
-    console.log(response, 'hh')
     if (response.headers.authorization) {
       store.commit('user/settoken', response.headers.authorization)
     }

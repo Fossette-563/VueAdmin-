@@ -21,7 +21,21 @@ const login = (data) => {
   })
 }
 
+/**
+ * 用户接口
+ */
+const userInfo = () => {
+  return request({ url: '/sys/userInfo', method: 'GET' })
+}
+/**
+ * 菜单栏接口
+ */
+const side = () => {
+  return request({ url: '/sys/menu/nav', method: 'GET' })
+}
 export default {
   login,
-  captcha
+  captcha,
+  userInfo,
+  side
 }

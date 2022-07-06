@@ -61,12 +61,26 @@ const onSubmit = async () => {
   await loginRef.value.validate()
   await useApi.login(form)
   router.push('/')
+  getuserInfo()
+  side()
 }
 // 获取验证码
 const hh = () => {
   ElMessage({
     message: '请扫描左边的二维码，回复【VueAdmin】获取登录密码'
   })
+}
+// 获取用户信息
+const getuserInfo = async () => {
+  const res = await useApi.userInfo()
+  console.log(res, 'user')
+  store.commit('user/setUseInfo', res)
+}
+// 获取菜单栏
+const side = async () => {
+  const sideres = await useApi.side()
+  console.log(sideres, 'side')
+  store.commit('user/setside', sideres)
 }
 </script>
 
